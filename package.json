@@ -7,6 +7,7 @@
     "prepublish": "browserify lib/*.js -o out/index.js --ignore-missing --entry lib/index.js && browserify lib/browser-globals.js -o out/browser-globals.js",
     "start": "browserify lib/browser-globals.js -o out/browser-globals.js && watchify lib/*.js -o out/index.js --ignore-missing --entry lib/index.js --verbose",
     "test": "mocha test/unit/*-test.js test/integration/*-test.js && standard",
+    "test-alt": "electron test/app.js",
     "prepack": "check-for-leaks",
     "prepush": "check-for-leaks"
   },
@@ -28,24 +29,24 @@
   ],
   "homepage": "https://github.com/electron/devtron#readme",
   "devDependencies": {
-    "body-parser": "^1.15.0",
-    "browserify": "^13.0.0",
-    "chai": "^3.5.0",
-    "chai-as-promised": "^5.3.0",
-    "check-for-leaks": "^1.2.0",
-    "cors": "^2.7.1",
-    "electron-prebuilt": "~1.2.2",
-    "express": "^4.13.4",
-    "husky": "^0.14.3",
-    "mocha": "^2.4.5",
-    "spectron": "~3.2.3",
-    "standard": "^6.0.8",
-    "watchify": "^3.7.0"
+    "body-parser": "^1.19.0",
+    "browserify": "^17.0.0",
+    "chai": "^4.3.3",
+    "chai-as-promised": "^7.1.1",
+    "check-for-leaks": "^1.2.1",
+    "cors": "^2.8.5",
+    "electron": "^12.0.0",
+    "express": "^4.17.1",
+    "husky": "^5.1.3",
+    "mocha": "^8.3.0",
+    "spectron": "~13.0.0",
+    "standard": "^16.0.3",
+    "watchify": "^4.0.0"
   },
   "dependencies": {
-    "accessibility-developer-tools": "^2.11.0",
-    "highlight.js": "^9.3.0",
-    "humanize-plus": "^1.8.1"
+    "accessibility-developer-tools": "^2.12.0",
+    "highlight.js": "^10.6.0",
+    "humanize-plus": "^1.8.2"
   },
   "standard": {
     "ignore": [
